@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notesofacarpenter</title>
+    <link rel="stylesheet" href="noac.css">
+</head>
+<body>
+<header>
+    <p class="header">大工用計算機</p>
+</header>
+<main>
+<ul>
+<li>
+    <h2>筋交</h2>
+</li>   
+</ul>
+<h3>筋交い長さ</h3>
+<div>
+    <form oninput="op1.value = Math.sqrt(Number(a.value)*Number(a.value) + Number(b.value)*Number(b.value));">
+    √内法タテ
+    <input type="number" name="a" value="">
+     の2乗<br>＋ 内法ヨコ
+    <input type="number" name="b" value="">
+     の2乗<br>＝ 
+    <output name="op1"  style="background:#FCC;">筋交い長さ</output>
+    </form>
+</div>
+<h3>
+    筋交い角度
+</h3>
+<div>
+<form oninput="op1.value = (Number(c.value) / Number(d.value))*100;">
+
+    内法ヨコ
+    <input type="number" name="c" value=""><br>
+     ÷ 内法タテ
+    <input type="number" name="d" value="">
+     ×１００<br>＝ 
+    <output name="op1"  style="background:#FCC;">筋交い角度</output>／１００
+    </form>
+</div>
+    <br>
+    <ul>
+        <li>
+    <h2>割り付け</h2>
+</li>
+</ul>
+<div> 
+
+<form oninput="op3.value =(((Number(e.value) / Number(f.value))-Math.floor(Number(e.value) / Number(f.value))+1)/2)*Number(f.value);op5.value =Math.ceil(Number(e.value) / (Number(f.value)*0.99))">
+   現場の総長さ
+    <input type="number" name="e" value="" id="area">
+    <br>
+    加工品の働き幅 
+    <input type="number" name="f" value="" id="mar" max="e.value">
+    <br>
+    1枚目幅（使う方）
+    <output name="op3"  style="background:#FCC;">0</output>
+    <br>
+    枚数
+    <output name="op5" style="background: #fcc;">0</output>
+    <script src="noac.js"></script>
+     <!--
+    <br>
+     枚数
+    <output id="what" style="background:#FCC;">0</output>
+    <script src="noac.js"></script>
+   
+</form>
+<form oninput="op5.value =Math.ceil(Number(e.value) / Number(f.value))">
+    現場の総長さ
+    <input type="number" name="e" value="">
+    <br>
+    加工品の働き幅 
+    <input type="number" name="f" value="">
+    <br>
+    枚数
+    <output name="op5" style="background: #fcc;">0</output>
+</form>
+-->
+</div>
+<ul>
+    <li>
+        <h2>大矩</h2>
+    </li>
+</ul>
+<div>
+    <form oninput="op4.value = Math.sqrt(Number(g.value)*Number(g.value) + Number(h.value)*Number(h.value));">
+    長辺の長さ
+    <input type="number" name="g" value="">
+     <br>
+    短辺の長さ
+    <input type="number" name="h" value="">
+    <br>
+    大矩の斜め長さ
+    <output name="op4"  style="background:#FCC;">0</output>
+    </form>
+</div>
+</main>
+    <!--
+<br>
+    <form oninput="keisan.value = a.valueAsNumber + b.valueAsNumber">
+        <input type="number" name="a" value="0"> +
+        <input type="number" name="b" value="0"> =
+        <output name="keisan">結果</output>
+        </form>   
+
+
+<br>
+<form method="post" oninput="result.value=parseInt(num1.value) + parseInt(num2.value);">
+    <div>
+     <label for="number">合計を表示</label>
+     <input type="number" name="num1" value="0"> ＋ 
+     <input type="number" name="num2" value="0"> ＝ <output name="result">0</output>
+    </div>
+   </form>
+
+<br>
+   <form oninput="op1.value = Number(a.value) + Number(b.value);">
+    <input type="number" name="a" value="0">
+     ＋ 
+    <input type="number" name="b" value="0">
+     ＝ 
+    <output name="op1" style="background:#FCC;" >0</output>
+    </form>
+-->
+<!--
+内法タテ
+<input type="number" id="braceHeight" value="2700" max="999999" />
+
+<br>
+内法ヨコ
+<input type="number" id="braceWidth" value="1715" max="999999" />
+<br>
+<input type="button" value="筋交い長さ" onclick="braceClickBtn()"/>
+<p>内法タテ <span id="whatSpan"></span></p>
+<p>内法ヨコ <span id="whatSpan2"></span></p>
+<script>
+    function braceClickBtn(){
+        const iBH =document.getElementById("braceHeight");
+        const iBW = document.getElementById("braceWidth");
+        document.getElementById("whatSpan").textContent= iBH.value;
+        document.getElementById("whatSpan2").textContent= iBW.value;
+        console. log(iBH.value);
+    }
+</script>
+-->
+<br>
+
+<br>
+自己責任で確認してください
+</body>
+</html>
